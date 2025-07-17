@@ -1,0 +1,35 @@
+# 策略名称（可自定义）
+strategy_name: simple_pmm
+# 交易对（如 BTCUSDT，后续可扩展多币种）
+symbol: BTCUSDT # 用于测试小额下单
+# 杠杆倍数
+leverage: 1
+# 初始资金（单位：USDT）
+initial_capital: 12000    # 200USDT初始资金
+# 最大持仓占比（如0.5表示最大持仓为初始资金的50%）
+max_net_position_ratio: 0.5 # 最大持仓占比50%
+
+# 挂单相关配置
+order_config:
+  # 挂单档位数（如3档）
+  levels: 3
+  # 每档挂单的名义资金量即挂单USDT*杠杆倍数（U本位）
+  quantity_per_order_usdt: 500
+  # 每档价格相对中间价的偏移百分比（如0.25%）
+  price_offset_percent: 0.005
+
+# 刷新频率相关配置
+refresh_config:
+  # 挂单刷新间隔（单位：秒）
+  orderbook_refresh_interval: 5
+  # 风控检查间隔（单位：秒）
+  risk_check_interval: 1
+
+# 日志相关配置
+logging:
+  # 是否将指标写入CSV日志
+  log_to_csv: true
+  # 日志文件目录
+  log_directory: ./logs
+  # 日志级别（如 info/debug/warning/error）
+  log_level: info

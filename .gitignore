@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 环境与依赖
+.venv/
+venv/
+ENV/
+
+# 敏感配置
+.env
+
+# 测试与缓存
+test/
+.pytest_cache/
+
+# 日志与临时文件
+logs/
+*.log
+开发日志_*.md
+
+# Jupyter等临时
+.ipynb_checkpoints/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 其他
+*.swp 
